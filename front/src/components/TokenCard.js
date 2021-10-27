@@ -13,12 +13,14 @@ import axios from 'axios';
 import { FcLike, FcDislike } from "react-icons/fc";
 import { GoRocket } from "react-icons/go";
 
+const BASE_URL = process.env.REACT_APP_BASE_URL;
+
 export default function TokenCard({ assetInfo, account, useFavorite = true }) {
 
   const bg = useColorModeValue('#151f21', 'gray.900');
 
   const addToServer = async () => {
-    await axios.post("http://localhost:8000/nfts/", {
+    await axios.post(`${BASE_URL}/nfts/`, {
       "user_address": account,
       "asset_contract_address": assetInfo["asset_contract"]["address"],
       "token_id": assetInfo.token_id
@@ -26,7 +28,7 @@ export default function TokenCard({ assetInfo, account, useFavorite = true }) {
   }
 
   const removeFromServer = async () => {
-    await axios.delete(`http://localhost:8000/nfts/${assetInfo["serverId"]}`)
+    await axios.delete(`${BASE_URL}/nfts/${assetInfo["serverId"]}`)
   }
 
   return (
