@@ -10,9 +10,9 @@ import {
 } from '@chakra-ui/react';
 import axios from 'axios';
 import TokenCard from '../components/TokenCard';
-
-
 import NavBar from './NavBar';
+
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function MyTokens() {
 
@@ -34,7 +34,7 @@ export default function MyTokens() {
 
         let assets = [];
 
-        let responseServer = await axios.get(`http://127.0.0.1:8000/nfts/user/${tempAccounts[0]}`);
+        let responseServer = await axios.get(`${BASE_URL}/nfts/user/${tempAccounts[0]}`);
 
         for await (let asset of responseServer.data) {
           let response = await axios.get(`https://api.opensea.io/api/v1/asset/${asset["asset_contract_address"]}/${asset["token_id"]}/`)

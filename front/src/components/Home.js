@@ -32,7 +32,6 @@ export default function Tokens() {
         setAccounts(tempAccounts);
 
         const response = await axios.get("https://api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=50")
-        console.log(response)
         setAssets(response.data.assets);
 
       } catch (error) {
