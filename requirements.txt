@@ -7,4 +7,4 @@ djangorestframework
 markdown
 django-filter
 python-dotenv
-corsheaders
+django-cors-headers
