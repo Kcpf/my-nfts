@@ -1,6 +1,16 @@
 # Projeto 2: Consumo de APIs
 O objetivo deste projeto é praticar o desenvolvimento e consumo de APIs REST.
 
+## Como usar?
+Você deve habilitar no seu navegador alguma wallet blockchain compatível com o aplicativo. Recomendo usar o [Metamask](https://metamask.io/)
+
+Front-end Endpoint: https://my-nfts.netlify.app
+
+Back-end Endpoint: https://my-nfts.herokuapp.com
+
+## Item avançado para o conceito A+
+Conexão com uma carteira blockchain e login no aplicativo a partir dela
+
 ## Restrições
 O tema deste projeto é aberto, mas ele possui algumas restrições:
 
